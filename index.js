@@ -12,10 +12,7 @@ const Posts = require('./model/postSchema');
 
 mongoose.connect('mongodb+srv://ayush:ayush@cluster0.gpekoyl.mongodb.net/newInsta')
 
-app.use(cors({
-    origin: 'http://localhost:5173', 
-    credentials: true // If your frontend sends credentials (cookies, authorization headers, etc.), set this to true
-}));
+app.use(cors());
 
 app.use(expressSession({
     resave:false,
